@@ -1,0 +1,27 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+.navbar {
+	background-color: #33485f;
+	border-color: #33485f;
+}
+.navbar-brand, .navbar-nav > li > a {
+	color: #fff;
+	opacity: .4;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
+	letter-spacing:1.15px;
+	font-size:14px;
+	line-height:17px;
+}
