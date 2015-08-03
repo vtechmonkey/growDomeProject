@@ -5,6 +5,10 @@
     <div class="list-group">
         <a data-ng-repeat="volunteer in volunteers" data-ng-href="#!/volunteers/{{volunteer._id}}" class="list-group-item">
 			<small class="list-group-item-text">
+                <ul>
+                    <li> {{volunteer.firstName}} {{volunteer.lastName}}</li>
+
+                </ul>
 				Posted on
 				<span data-ng-bind="volunteer.created | date:'medium'"></span>
 				by

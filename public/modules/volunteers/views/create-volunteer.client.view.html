@@ -5,14 +5,49 @@
     <div class="col-md-12">
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <i class="glyphicon glyphicon-thumbs-up volunteerIcon"></i>
                     </div>
+                    <div class="col-sm-6 text-center">
+                        <div class="form-group">
+                            <label class="control-label" for="firstName">first name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="firstName" id="firstName" class="form-control" placeholder="first name" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="lastName">last name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="lastName" id="lastName" class="form-control" placeholder="last name" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">phone</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="phone" id="phone" class="form-control" placeholder="phone" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">email</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="email" id="email" class="form-control" placeholder="email" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="availability">availability</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="availability" id="availability" class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+
                 <div class="form-group">
-                    <input type="submit" class="btn btn-default">
+                    <input type="submit" class="btn btn-lg btn-success">
                 </div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>

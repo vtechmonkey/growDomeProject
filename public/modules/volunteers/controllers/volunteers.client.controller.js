@@ -9,7 +9,10 @@ angular.module('volunteers').controller('VolunteersController', ['$scope', '$sta
 		$scope.create = function() {
 			// Create new Volunteer object
 			var volunteer = new Volunteers ({
-				name: this.name
+				firstName: this.firstName,
+				lastName: this.lastName,
+				phone: this.phone,
+				email:this.email
 			});
 
 			// Redirect after save
@@ -17,7 +20,12 @@ angular.module('volunteers').controller('VolunteersController', ['$scope', '$sta
 				$location.path('volunteers/' + response._id);
 
 				// Clear form fields
-				$scope.name = '';
+				$scope.firstName = '';
+				$scope.lastName = '';
+				$scope.phone = '';
+				$scope.email = '';
+				$scope.availabity = ['less than 20hrs per week', 'over 20hrs per week'];
+
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
