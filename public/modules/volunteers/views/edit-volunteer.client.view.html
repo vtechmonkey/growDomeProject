@@ -1,23 +1,64 @@
-<section data-ng-controller="VolunteersController" data-ng-init="findOne()">
-    <div class="page-header">
-        <h1>Edit Volunteer</h1>
+<section data-ng-controller="VolunteersEditController as volunteersEditCtrl">
+    <div class="modal-header">
+        <h3 class="modal-title">Edit {{volunteer.firstName}}'s Profile</h3>
     </div>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+    <div class="modal-body">
+    </div>
+
+        <form name="updateVolunteerForm">
             <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="volunteer.name" id="name" class="form-control" placeholder="Name" required>
+
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <i class="glyphicon glyphicon-user volunteerIcon" ng-class="{'text-success':volunteer.full_time,'text-primary':!volunteer.full_time}"></i>
                     </div>
+                    <div class="col-sm-6 col-xs-10 col-xs-offset-1 text-center">
+                        <div class="form-group">
+                            <label class="control-label" for="firstName">first name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="volunteer.firstName" id="firstName" class="form-control" placeholder="first name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="lastName">last name</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="volunteer.lastName" id="lastName" class="form-control" placeholder="last name" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">phone</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="volunteer.phone" id="phone" class="form-control" placeholder="phone" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">email</label>
+                            <div class="controls">
+                                <input type="text" data-ng-model="volunteer.email" id="email" class="form-control" placeholder="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="full_time">Available Full Time</label>
+                            <div class="controls">
+                                <input type="checkbox" data-ng-model="volunteer.full_time" id="full_time" class="form-control checkboxFulltime" >
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Update" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
+
+
+
+
             </fieldset>
         </form>
+
     </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" ng-click="volunteersEditCtrl.update(volunteer); ok()" ng-disabled="updateVolunteerForm.$invalid">Update & Close</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+
+
+
 </section>

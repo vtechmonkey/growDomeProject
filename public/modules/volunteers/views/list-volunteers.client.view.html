@@ -1,21 +1,55 @@
-<section data-ng-controller="VolunteersController" data-ng-init="find()">
+<section data-ng-controller="VolunteersController as volunteersCtrl" >
     <div class="page-header">
         <h1>Volunteers</h1>
     </div>
-    <div class="list-group">
-        <a data-ng-repeat="volunteer in volunteers" data-ng-href="#!/volunteers/{{volunteer._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-                <ul>
-                    <li> {{volunteer.firstName}} {{volunteer.lastName}}</li>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group input-group-lg">
+                <input type="text" class="form-control" ng-model="searchText" placeholder="search volunteers...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                 </span>
+            </div><!-- /input-group -->
 
-                </ul>
-				Posted on
-				<span data-ng-bind="volunteer.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="volunteer.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="volunteer.name"></h4>
-        </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 text-center">
+            <button type="button" class="btn btn-lg btn-success">
+                <i class="glyphicon glyphicon-user"></i>
+                New Customer
+            </button>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="list-group">
+        <div class="col-xs-6 col-sm-4" data-ng-repeat="volunteer in volunteersCtrl.volunteers | filter:searchText">
+            <a  ng-click="volunteersCtrl.modalUpdate('lg', volunteer)" class="list-group-item">
+               <h4 class="listVolunteerIcon text-center">
+                   <i class="glyphicon glyphicon-user" ng-class="{'text-success':volunteer.full_time,'text-primary':!volunteer.full_time}"></i>
+               </h4>
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-2">
+                        <h4>{{volunteer.firstName}} {{volunteer.lastName}} </h4>
+                       <h4> phone: {{volunteer.phone}} </h4>
+                       <h4> {{volunteer.email}}</h4>
+                       <h4> {{volunteer.full_time}}</h4>
+                        <small class="list-group-item-text text-muted">
+                            Added on
+                            <span data-ng-bind="volunteer.created | date:'medium'"></span><br>
+                            by
+                            <span data-ng-bind="volunteer.user.displayName"></span>
+                        </small>
+                    </div>
+                </div>
+            </a>
+        </div>
+        </div>
+
+
+
+
+
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!volunteers.$resolved || volunteers.length">
     	No Volunteers yet, why don't you <a href="/#!/volunteers/create">create one</a>?

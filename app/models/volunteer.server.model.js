@@ -25,7 +25,6 @@ var VolunteerSchema = new Schema({
 	phone: {
 		type: String,
 		default: '',
-		required: 'Please fill in phone number',
 		trim: true
 
 	},
@@ -35,9 +34,8 @@ var VolunteerSchema = new Schema({
 		required: 'Please fill in email',
 		trim: true
 	},
-	availability: {
-		type: ['less than 20hrs per week', 'over 20hrs per week'],
-		default: 'less than 20hrs per week'
+	full_time: {
+		type: Boolean
 	},
 
 	created: {

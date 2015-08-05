@@ -1,4 +1,15 @@
 .volunteerIcon {
     font-size:250px;
-    color: limegreen;
+
+}
+.listVolunteerIcon {
+    font-size:100px;
+
+}
+.checkboxFulltime {
+    width:10%;
+    text-align: left;
+}
+.control-label {
+    float:left;
 }
