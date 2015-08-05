@@ -72,6 +72,16 @@ volunteerApp.controller('VolunteersEditController', ['$scope',  'Volunteers',
 	}
 ]);
 
+volunteerApp.directive('volunteerList',[function(){
+	return {
+		restrict: 'E',
+		transclude:true,
+		templateUrl: 'modules/volunteers/views/volunteer-list-template.html',
+		link:function(scope, element, attrs){
+
+		}
+	};
+}]);
 
 
         //
