@@ -101,8 +101,8 @@ volunteerApp.controller('VolunteersController', ['$scope', '$stateParams', 'Auth
 	}
 ]);
 
-volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers',
-	function($scope,  Volunteers) {
+volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers','Notify',
+	function($scope,  Volunteers, Notify) {
 
         // Create new Volunteer
         this.create = function() {
@@ -116,6 +116,8 @@ volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers',
 
         	// Redirect after save
         	volunteer.$save(function(response) {
+
+                Notify.sendMsg('NewVolunteer', {'id':response._id});
 
 
         		// Clear form fields
@@ -149,13 +151,16 @@ volunteerApp.controller('VolunteersEditController', ['$scope',  'Volunteers',
 	}
 ]);
 
-volunteerApp.directive('volunteerList',[function(){
+volunteerApp.directive('volunteerList',['Volunteers','Notify', function(Volunteers, Notify){
 	return {
 		restrict: 'E',
 		transclude:true,
 		templateUrl: 'modules/volunteers/views/volunteer-list-template.html',
 		link:function(scope, element, attrs){
-
+            // when a new volunteer is added, update the volunteer list
+            Notify.getMsg('NewVolunteer', function(event,data){
+                scope.volunteersCtrl.volunteers = Volunteers.query();
+            });
 		}
 	};
 }]);
