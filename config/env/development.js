@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://growdomeUser:lettuceEater@ds055862.mongolab.com:55862/growdome',
+	db: 'mongodb://<user>:<password>@ds<port>.mongolab.com:<port>/<databaseName>',
 	app: {
 		title: 'GROWDOME - Development Environment'
 	},
