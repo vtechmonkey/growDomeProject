@@ -15,6 +15,11 @@
 						<span data-ng-bind="volunteer.created | date:'medium'"></span><br>
 						by
 						<span data-ng-bind="volunteer.user.displayName"></span>
+						<span class="pull-right" >
+							<button class="btn btn-default btn-sm" ng-click="volunteersCtrl.remove(volunteer)">
+								<i class="glyphicon glyphicon-trash"></i>
+							</button>
+						</span>
 					</small>
 				</div>
 			</div>
