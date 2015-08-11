@@ -1,5 +1,6 @@
 .content {
 	margin-top: 50px;
+	margin-left: 200px;
 }
 .undecorated-link:hover {
 	text-decoration: none;
@@ -16,8 +17,20 @@
 .navbar {
 	background-color: #33485f;
 	border-color: #33485f;
+	position:fixed;
+	max-width:200px;
+	height:100%;
+
 }
 .navbar-brand, .navbar-nav > li > a {
+	color: #fff;
+	opacity: .4;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
+	letter-spacing:1.15px;
+	font-size:14px;
+	line-height:17px;
+}
+.nav > li > a {
 	color: #fff;
 	opacity: .4;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
