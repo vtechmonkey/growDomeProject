@@ -1,6 +1,6 @@
 .content {
-	margin-top: 50px;
-	margin-left: 200px;
+
+	margin-left: 190px;
 }
 .undecorated-link:hover {
 	text-decoration: none;
@@ -14,6 +14,25 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
+.horizontalMenu {
+	background-color: #33485f;
+	padding-top:10px;
+	top:0;
+	min-height:50px;
+}
+.glyphicon-menu-hamburger {
+	top:2;
+	font-size:22px;
+	color: #cccddd;
+
+}
+.nav {
+	margin-bottom: 30px;
+}
+
+.collapse .navbar-collapse {
+	margin-left:25px;
+}
 .navbar {
 	background-color: #33485f;
 	border-color: #33485f;
@@ -22,7 +41,15 @@
 	height:100%;
 
 }
-.navbar-brand, .navbar-nav > li > a {
+.navbar-brand {
+	padding:0;
+}
+.loginIcon {
+	font-size: 70px;
+	margin-left: 28px;
+	color: #cccddd;
+}
+ .navbar-nav > li > a {
 	color: #fff;
 	opacity: .4;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
