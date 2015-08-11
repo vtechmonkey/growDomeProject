@@ -6,6 +6,6 @@ angular.module('volunteers').run(['Menus',
 		// Set top bar menu items
 		Menus.addMenuItem('topbar', 'Volunteers', 'volunteers', 'dropdown', '/volunteers(/create)?');
 		Menus.addSubMenuItem('topbar', 'volunteers', 'List Volunteers', 'volunteers');
-		Menus.addSubMenuItem('topbar', 'volunteers', 'New Volunteer', 'volunteers/create');
+		//Menus.addSubMenuItem('topbar', 'volunteers', 'New Volunteer', 'volunteers/create');
 	}
 ]);
