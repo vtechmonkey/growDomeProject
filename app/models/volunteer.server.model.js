@@ -38,6 +38,11 @@ var VolunteerSchema = new Schema({
 		type: Boolean
 	},
 
+	experienceLevel: {
+		type:String,
+		default:''
+
+	},
 	created: {
 		type: Date,
 		default: Date.now

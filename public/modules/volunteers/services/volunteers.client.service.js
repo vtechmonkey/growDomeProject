@@ -23,7 +23,7 @@ angular.module('volunteers')
 		notify.getMsg = function(msg, func, scope) {
 			var unbind = $rootScope.$on(msg, func);
 			if (scope){
-				scope.$on('destroy', unbind)
+				scope.$on('destroy', unbind);
 			}
 		};
 		return notify;

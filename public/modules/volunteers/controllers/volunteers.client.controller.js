@@ -104,6 +104,13 @@ volunteerApp.controller('VolunteersController', ['$scope', '$stateParams', 'Auth
 volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers','Notify',
 	function($scope,  Volunteers, Notify) {
 
+		$scope.experienceLevel = [
+			{id:1, item:'beginner'},
+			{id:2, item:'intermediate'},
+			{id:3, item:'advanced'}
+
+		];
+
         // Create new Volunteer
         this.create = function() {
         	// Create new Volunteer object
@@ -111,7 +118,8 @@ volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers','
         		firstName: this.firstName,
         		lastName: this.lastName,
         		phone: this.phone,
-        		email:this.email
+        		email:this.email,
+				experienceLevel:this.experienceLevel
         	});
 
         	// Redirect after save
@@ -125,7 +133,9 @@ volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers','
         		$scope.lastName = '';
         		$scope.phone = '';
         		$scope.email = '';
-        		$scope.availabity = ['less than 20hrs per week', 'over 20hrs per week'];
+        		$scope.availabity = '';
+				$scope.experienceLevel ='';
+
 
         	}, function(errorResponse) {
         		$scope.error = errorResponse.data.message;
@@ -136,6 +146,13 @@ volunteerApp.controller('VolunteersCreateController', ['$scope',  'Volunteers','
 
 volunteerApp.controller('VolunteersEditController', ['$scope',  'Volunteers',
 	function($scope,  Volunteers) {
+
+		$scope.experienceLevel = [
+			{id:1, item:'beginner'},
+			{id:2, item:'intermediate'},
+			{id:3, item:'advanced'},
+
+		];
 
 		 //Update existing Volunteer
 		this.update = function(editedVolunteer) {

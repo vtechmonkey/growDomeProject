@@ -43,6 +43,14 @@
                                 <input type="checkbox" data-ng-model="volunteerCreateCtrl.full_time" id="full_time" class="form-control checkboxFulltime" >
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label" for="experience">Experience Level</label>
+                            <div class="controls">
+                                <select ng-model="volunteer.experienceLevel"id="experience" class="form-control" ng-options="experience.item for experience in experienceLevel">
+                                    <option value="">-- volunteer's experience level --</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
