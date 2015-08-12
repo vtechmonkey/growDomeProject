@@ -1,6 +1,9 @@
-.content {
+.content{
 
-	margin-left: 190px;
+	background-color: #dedede;
+}
+.container {
+	margin-left: 200px;
 }
 .undecorated-link:hover {
 	text-decoration: none;

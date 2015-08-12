@@ -1,3 +1,22 @@
+body {
+
+}
+.btn {
+color:#fff;
+}
+.btn-blue {
+    background-color:#33485f;
+}
+.btn-grey {
+    background-color:#667585;
+}
+.volunteerModal{
+   border-radius: 5px;
+   height:430px;
+}
+.nameHeader {
+    border-bottom: thick solid pink;
+}
 .volunteerIcon {
     font-size:250px;
 
@@ -14,5 +33,16 @@
     float:left;
 }
 .list-padding {
-    padding:15px;
+    padding-bottom:15px;
+    margin-top:0;
+}
+.list-volunteer{
+    padding-top: 20px;
+}
+.list-group {
+    margin-bottom: 0;
+}
+.volunteer-search {
+    background-color:#667585;
+    height:900px;
 }

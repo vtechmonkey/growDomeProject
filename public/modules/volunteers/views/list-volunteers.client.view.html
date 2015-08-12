@@ -1,27 +1,40 @@
-<section data-ng-controller="VolunteersController as volunteersCtrl" >
-    <div class="page-header">
-        <h1>Volunteers</h1>
+<section class="main-content" data-ng-controller="VolunteersController as volunteersCtrl" >
+    <div class="row horizontalMenu">
+        <div class="col-md-10">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </div>
+        <div class="col-md-2 ">
+            <span><img src="modules/core/img/brand/NotificationBell.png"/></span>
+            <span><img src="modules/core/img/brand/ChatNotifications.png"/></span>
+        </div>
     </div>
+
     <div class="row">
-        <div class="col-xs-12 col-sm-8">
-            <div class="input-group input-group-lg">
+        <div class="col-xs-12 col-sm-4 volunteer-search">
+            <h1>
+                <div class="input-group input-group-lg">
                 <input type="text" class="form-control" ng-model="searchText" placeholder="search volunteers...">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
+                    <button class="btn btn-blue" type="button">SEARCH</button>
                  </span>
-            </div><!-- /input-group -->
-
+                </div>
+            </h1>
+            <h4>
+                Search by availabilty
+            </h4>
+            <h1>
+                <img src="modules/volunteers/img/kalendar.png">
+            </h1>
+                <button type="button" class="btn btn-lg btn-blue"  ng-click="volunteersCtrl.modalCreate('lg')">
+                    <i class="glyphicon glyphicon-user"></i>
+                    New Volunteer
+               </button>
         </div>
-        <div class="col-xs-12 col-sm-4 text-center">
-            <button type="button" class="btn btn-lg btn-success"  ng-click="volunteersCtrl.modalCreate('lg')">
-                <i class="glyphicon glyphicon-user"></i>
-                New Customer
-            </button>
-
+        <div class="col-xs-12 col-sm-8 text-center list-volunteer">
+            <volunteer-list></volunteer-list><!-- directive -->
         </div>
     </div>
-    <br>
-    <br>
-    <volunteer-list></volunteer-list>
+
+
 
 </section>
