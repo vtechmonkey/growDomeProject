@@ -6,8 +6,8 @@ module.exports = {
 		title: 'GROWDOME - Development Environment'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || '620436711426558',
-		clientSecret: process.env.FACEBOOK_SECRET || '2b2f828a375b3c5c0b6c96e80aba739c',
+		clientID: process.env.FACEBOOK_ID || '',
+		clientSecret: process.env.FACEBOOK_SECRET || '',
 		callbackURL: '/auth/facebook/callback'
 	},
 	twitter: {
