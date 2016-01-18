@@ -31,7 +31,7 @@ module.exports = function() {
           lastName: profile.name.familyName,
           displayName: profile.displayName,
           email: (profile.emails)? profile.emails[0].value: '',// changed from original file
-          username: profile.username || profile.id, // changed from original file
+          username: profile.username || profile.id || facebookId, // changed from original file
           provider: 'facebook',
           providerIdentifierField: 'id',
           providerData: providerData
