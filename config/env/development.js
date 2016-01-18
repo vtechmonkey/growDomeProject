@@ -30,7 +30,7 @@ module.exports = {
 	github: {
 		clientID: process.env.GITHUB_ID || '1c0cbc599fb1fc777262',
 		clientSecret: process.env.GITHUB_SECRET || '6156c0dc8956fac1393702053c8d4470724752ff',
-		callbackURL: 'http://127.0.0.1:3000/auth/github/callback'
+		callbackURL: 'http://localhost:3000/auth/github/callback'
 	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',

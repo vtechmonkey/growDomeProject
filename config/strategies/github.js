@@ -29,7 +29,7 @@ module.exports = function() {
 				email: (profile.emails)? profile.emails[0].value: '',
 				username: profile.username || profile.id,
 				provider: 'github',
-				providerIdentifierField: 'id',
+				providerIdentifierField: 'profile.id',
 				providerData: providerData
 			};
 

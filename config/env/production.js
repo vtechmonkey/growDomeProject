@@ -44,9 +44,9 @@ module.exports = {
 		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/linkedin/callback'
 	},
 	github: {
-		clientID: process.env.GITHUB_ID || 'APP_ID',
-		clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',
-		callbackURL: '/auth/github/callback'
+		clientID: process.env.GITHUB_ID || 'b25ebb91ae1da54371f0',
+		clientSecret: process.env.GITHUB_SECRET || 'df92f04a17a728c7a064b135ccfa2c3f6c7e36d9',
+		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/github/callback'
 	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',
