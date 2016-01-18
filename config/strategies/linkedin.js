@@ -33,7 +33,7 @@ module.exports = function() {
 				email: (profile.emails)? profile.emails[0].value: '',
 				username: profile.username,
 				provider: 'linkedin',
-				providerIdentifierField: 'profile.id',
+				providerIdentifierField: 'profile.id',//changed from 'id'
 				providerData: providerData
 			};
 
