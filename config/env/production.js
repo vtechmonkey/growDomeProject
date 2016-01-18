@@ -34,8 +34,8 @@ module.exports = {
 		callbackURL: '	https://boiling-refuge-3005.herokuapp.com/auth/twitter/callback'
 	},
 	google: {
-		clientID: process.env.GOOGLE_ID || '378454823667-qqq59uord29i500j6geidc912un67v2b.apps.googleusercontent.com',
-		clientSecret: process.env.GOOGLE_SECRET || 'bEQDzJrX_1EJrP1udBlustQm',
+		clientID: process.env.GOOGLE_ID || '831179169893-lk777eai2dhdrp4ihh4qo4kauehtu2qg.apps.googleusercontent.com',
+		clientSecret: process.env.GOOGLE_SECRET || 'jq96JwOHj25litlpb5g2Dy3w',
 		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/google/callback'
 	},
 	linkedin: {
