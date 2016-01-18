@@ -15,7 +15,7 @@ module.exports = function() {
 			clientID: config.github.clientID,
 			clientSecret: config.github.clientSecret,
 			callbackURL: config.github.callbackURL,
-			passReqToCallback: true
+			enableProof:false //passReqToCallback: true
 		},
 		function(req, accessToken, refreshToken, profile, done) {
 			// Set the provider data and include tokens
@@ -26,8 +26,8 @@ module.exports = function() {
 			// Create the user OAuth profile
 			var providerUserProfile = {
 				displayName: profile.displayName,
-				email: profile.emails[0].value,
-				username: profile.username,
+				email: (profile.emails)? profile.emails[0].value: '',
+				username: profile.username || profile.id,
 				provider: 'github',
 				providerIdentifierField: 'id',
 				providerData: providerData
