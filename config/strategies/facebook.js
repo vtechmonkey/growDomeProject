@@ -14,11 +14,9 @@ module.exports = function() {
   passport.use(new FacebookStrategy({
         clientID: config.facebook.clientID,
         clientSecret: config.facebook.clientSecret,
-        callbackURL: config.facebook.callbackURL,
-        enableProof:false
-
-
+        callbackURL: config.facebook.callbackURL
       },
+
       function(req, accessToken, refreshToken, profile, done) {
         // Set the provider data and include tokens
         var providerData = profile._json;
@@ -31,9 +29,9 @@ module.exports = function() {
           lastName: profile.name.familyName,
           displayName: profile.displayName,
           email: (profile.emails)? profile.emails[0].value: '',// changed from original file
-          username: profile.username || profile.id || facebookId, // changed from original file
+          username: profile.username || profile.id, // changed from original file
           provider: 'facebook',
-          providerIdentifierField: 'id',
+          providerIdentifierField: 'profile.id',
           providerData: providerData
         };
 
