@@ -24,24 +24,24 @@ module.exports = {
 		js: 'public/dist/application.min.js'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || '',
-		clientSecret: process.env.FACEBOOK_SECRET || '',
-		callbackURL: '/auth/facebook/callback'
+		clientID: process.env.FACEBOOK_ID || '936432603093229',
+		clientSecret: process.env.FACEBOOK_SECRET || 'e2f62960d65c48c8c1fc8673a8c755ca',
+		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/facebook/callback'
 	},
 	twitter: {
-		clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
-		clientSecret: process.env.TWITTER_SECRET || 'CONSUMER_SECRET',
-		callbackURL: '/auth/twitter/callback'
+		clientID: process.env.TWITTER_KEY || 'hF3jqsd47lvO3XRgPuVdA8Zke',
+		clientSecret: process.env.TWITTER_SECRET || 'CLylVxO4Z0YjYzJZrf027CbDycJgSdF0TUM5iGtYXJj2xHiyFp',
+		callbackURL: '	https://boiling-refuge-3005.herokuapp.com/auth/twitter/callback'
 	},
 	google: {
-		clientID: process.env.GOOGLE_ID || 'APP_ID',
-		clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',
-		callbackURL: '/auth/google/callback'
+		clientID: process.env.GOOGLE_ID || '378454823667-qqq59uord29i500j6geidc912un67v2b.apps.googleusercontent.com',
+		clientSecret: process.env.GOOGLE_SECRET || 'bEQDzJrX_1EJrP1udBlustQm',
+		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/google/callback'
 	},
 	linkedin: {
-		clientID: process.env.LINKEDIN_ID || 'APP_ID',
-		clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',
-		callbackURL: '/auth/linkedin/callback'
+		clientID: process.env.LINKEDIN_ID || '77ipwhebla1rkv',
+		clientSecret: process.env.LINKEDIN_SECRET || 'RakJR2tX031qsb1x',
+		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/linkedin/callback'
 	},
 	github: {
 		clientID: process.env.GITHUB_ID || 'APP_ID',
