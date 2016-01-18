@@ -39,8 +39,8 @@ module.exports = {
 		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/google/callback'
 	},
 	linkedin: {
-		clientID: process.env.LINKEDIN_ID || '77ipwhebla1rkv',
-		clientSecret: process.env.LINKEDIN_SECRET || 'RakJR2tX031qsb1x',
+		clientID: process.env.LINKEDIN_ID || '77xww4ieohads6',
+		clientSecret: process.env.LINKEDIN_SECRET || 'jUScHKaTZxaTM9wj',
 		callbackURL: 'https://boiling-refuge-3005.herokuapp.com/auth/linkedin/callback'
 	},
 	github: {
